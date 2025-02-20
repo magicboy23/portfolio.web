@@ -21,7 +21,7 @@ const Jumbotron = () => {
               <Button className="bg-[#F6FF00] font-semibold text-black">
                 Hire Me
               </Button>
-              <div className="max-w-md overflow-hidden rounded-xl bg-white p-4 shadow-md">
+              <div className="motion-preset-pop motion-preset-shake max-w-md overflow-hidden rounded-xl bg-white p-4 shadow-md motion-duration-1500">
                 <div className="flex items-center space-x-4">
                   <img
                     className="h-12 w-12 rounded-full object-cover"
@@ -40,7 +40,7 @@ const Jumbotron = () => {
                   product, I love you
                 </p>
               </div>
-              <div className="max-w-md overflow-hidden rounded-xl bg-white p-4 shadow-md">
+              <div className="motion-preset-shake max-w-md overflow-hidden rounded-xl bg-white p-4 shadow-md motion-duration-500">
                 <div className="flex items-center space-x-4">
                   <img
                     className="h-12 w-12 rounded-full object-cover"
