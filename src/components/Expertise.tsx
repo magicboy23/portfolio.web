@@ -1,59 +1,60 @@
-import CardExpertise from "./CardExpertise";
-import {
-  BoxIcon,
-  ActivityIcon,
-  LayoutDashboardIcon,
-  ComputerIcon,
-} from "lucide-react";
+import React from "react";
 
-const data = [
-  {
-    title: "Frontend Developer",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam illo dicta libero aliquam perspiciatis sequi?",
-    icon: BoxIcon,
-  },
-  {
-    title: "Poster Design",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam illo dicta libero aliquam perspiciatis sequi?",
-    icon: ActivityIcon,
-  },
-  {
-    title: "UI & UX Design",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam illo dicta libero aliquam perspiciatis sequi?",
-    icon: LayoutDashboardIcon,
-  },
-  {
-    title: "Web Designer",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam illo dicta libero aliquam perspiciatis sequi?",
-    icon: ComputerIcon,
-  },
-];
-
-const Expertise = () => {
+const MySkills = () => {
   return (
-    <section className="bg-[#181818] px-4 py-24">
-      <p className="text-center text-3xl font-semibold text-[#f6ff00]">
-        My Expertise
-      </p>
-
-      <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-4">
-        {data.map((item, index) => {
-          return (
-            <CardExpertise
+    <section className="flex justify-center bg-[#0b4344] py-12">
+      <div className="mx-auto max-w-6xl px-6 text-gray-800">
+        <h2 className="mb-8 text-center text-6xl font-bold text-white">
+          My Skills
+        </h2>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {skills.map((skill, index) => (
+            <div
               key={index}
-              title={item.title}
-              description={item.description}
-              icon={item.icon}
-            />
-          );
-        })}
+              className="rounded-2xl border bg-white p-6 text-center shadow-lg transition hover:shadow-xl"
+            >
+              <div className="mb-4 text-4xl">{skill.icon}</div>
+              <h3 className="mb-2 text-xl font-semibold">{skill.title}</h3>
+              <p className="text-gray-600">{skill.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
-export default Expertise;
+const skills = [
+  {
+    icon: "💻",
+    title: "Web Design",
+    description: "Creating visually appealing and user-friendly designs.",
+  },
+  {
+    icon: "⚙️",
+    title: "Web Development",
+    description: "Building responsive and interactive web applications.",
+  },
+  {
+    icon: "📱",
+    title: "Mobile UI/UX",
+    description: "Designing seamless experiences for mobile apps.",
+  },
+  {
+    icon: "🖌️",
+    title: "Illustration",
+    description: "Bringing ideas to life with creative illustrations.",
+  },
+  {
+    icon: "📢",
+    title: "Branding",
+    description: "Crafting unique and memorable brand identities.",
+  },
+  {
+    icon: "📊",
+    title: "Marketing",
+    description: "Using strategic marketing to drive engagement.",
+  },
+];
+
+export default MySkills;

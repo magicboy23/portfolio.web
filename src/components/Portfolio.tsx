@@ -1,60 +1,85 @@
-const skills = [
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+const testimonials = [
   {
-    src: "my telkomsel.png",
+    id: 1,
+
+    image: "matcha-comp.jpg",
   },
   {
-    src: "my tri.png",
+    id: 2,
+
+    image: "strawberry-comp.jpg",
   },
   {
-    src: "marketing byu.jpg",
-    highlight: false,
+    id: 3,
+
+    image: "coklat-comp.jpg",
   },
   {
-    src: "my xl.png",
+    id: 4,
+
+    image: "oreo-comp.jpg",
   },
   {
-    src: "oreo-comp.jpg",
+    id: 5,
+
+    image: "marketing byu.png",
   },
   {
-    src: "strawberry-comp.jpg",
+    id: 6,
+
+    image: "my tri.png",
   },
   {
-    src: "matcha-comp.jpg",
+    id: 7,
+
+    image: "my xl.png",
   },
   {
-    src: "coklat-comp.jpg",
+    id: 8,
+
+    image: "my telkomsel.png",
   },
 ];
 
-const Portfolio = () => {
+export default function Testimony() {
   return (
-    <section className="bg-[#181818] px-4 py-24">
-      <p className="text-center text-3xl font-semibold text-[#f6ff00]">
+    <div className="mx-auto bg-[#0b4344] px-4 py-24">
+      <h2 className="mb-10 text-center text-6xl font-bold text-white">
         Portfolio
-      </p>
-      <div className="flex min-h-screen items-center justify-center bg-[#181818] p-6">
-        <div className="grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className={`flex flex-col items-center justify-center rounded-lg p-4 shadow-md transition-all ${
-                skill.highlight
-                  ? "bg-yellow-500"
-                  : "border border-white bg-[#181818]"
-              }`}
-            >
-              <img src={skill.src} className="h-50 mb-1 w-80 object-contain" />
-              <span className="text-sm font-semibold"></span>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="m-16 grid grid-cols-1 gap-8 md:grid-cols-4">
-        <div className="grid grid-cols-1 md:grid-cols-2"></div>
-      </div>
-      ;
-    </section>
-  );
-};
+      </h2>
 
-export default Portfolio;
+      <Swiper
+        modules={[Pagination, Navigation]}
+        spaceBetween={20}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        navigation
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="pb-10"
+      >
+        {testimonials.map((testimonial) => (
+          <SwiperSlide key={testimonial.id}>
+            <div className="flex flex-col items-center rounded-xl bg-gray-900 p-3 text-center shadow-lg">
+              <img src={testimonial.image} className="w-50 h-50 mb-4" />
+              <h3 className="text-lg font-semibold"></h3>
+              <p className="mt-2 text-sm text-gray-600"></p>
+              <div className="mt-4 flex"></div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+}

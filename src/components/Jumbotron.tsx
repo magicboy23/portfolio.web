@@ -2,26 +2,28 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 const Jumbotron = () => {
   return (
-    <section className="bg-[#181818] px-4 py-24">
+    <section className="bg-[#0b4344] px-4 py-24">
       <div className="container m-auto">
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* KOLOM 1  */}
           <div className="flex items-center">
             <div className="space-y-4">
-              <p className="text-4xl text-white">Hi There! i'am Tribaskoro</p>
-              <p className="text-6xl font-semibold text-[#f6ff00] md:text-6xl">
+              <p className="motion-preset-typewriter-[10] text-4xl text-white">
+                Hi There! i'am Tribaskoro
+              </p>
+              <p className="text-6xl font-semibold text-[#ffb71c] md:text-6xl">
                 Frontend developer
               </p>
-              <p className="text-[#c8c8c8]">
+              <p className="text-white">
                 I'm a junior FrontEnd developer with experiense <br /> in many
                 different languages, frameworks. I'm always looking <br />
                 for new challenges.
               </p>
 
-              <Button className="bg-[#F6FF00] font-semibold text-black">
+              <Button className="bg-[#ffb71c] font-semibold text-black">
                 Hire Me
               </Button>
-              <div className="motion-preset-pop motion-preset-shake max-w-md overflow-hidden rounded-xl bg-white p-4 shadow-md motion-duration-1500">
+              <div className="motion-preset-wobble max-w-md overflow-hidden rounded-xl bg-[#ffffff] p-4 shadow-md motion-duration-2000">
                 <div className="flex items-center space-x-4">
                   <img
                     className="h-12 w-12 rounded-full object-cover"
@@ -40,7 +42,7 @@ const Jumbotron = () => {
                   product, I love you
                 </p>
               </div>
-              <div className="motion-preset-shake max-w-md overflow-hidden rounded-xl bg-white p-4 shadow-md motion-duration-1500">
+              <div className="motion-preset-oscillate max-w-md overflow-hidden rounded-xl bg-white p-4 shadow-md motion-duration-2000">
                 <div className="flex items-center space-x-4">
                   <img
                     className="h-12 w-12 rounded-full object-cover"
