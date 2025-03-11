@@ -44,7 +44,7 @@ const Jumbotron = () => {
               </div>
               <div className="motion-preset-oscillate max-w-md overflow-hidden rounded-xl bg-white p-4 shadow-md motion-duration-2000">
                 <div className="flex items-center space-x-4">
-                  <img
+                  <Image
                     className="h-12 w-12 rounded-full object-cover"
                     src="anya.jpg"
                     alt="User Avatar"
